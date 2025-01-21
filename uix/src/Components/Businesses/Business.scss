@@ -1,0 +1,166 @@
+/* Location.css */
+
+/* Define color variables */
+:root {
+    --PrimaryColor: hsl(26, 93%, 50%);
+    --HoverColor: hsl(26, 90%, 42%);
+    --whiteColor: hsl(0, 0%, 100%);
+    --blackColor: hsl(0, 0%, 18%);
+    --textColor: hsl(240, 1%, 48%);
+    --whiteColorDream: hsl(0, 0%, 93%);
+    --greyBg: hsl(0, 0%, 96%);
+    --greyText: rgb(190, 190, 190);
+    --inputColor: hsl(330, 12%, 97%);
+}
+
+/* Section Styling */
+.location {
+    padding: 60px 0;
+    background-color: var(--PrimaryColor);
+}
+
+.section {
+    display: block;
+    margin: 0 auto;
+}
+
+.location {
+    background-color: var(--greyBg);
+}
+
+/* Container Styling */
+.locContainer {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header Styling */
+.locHeader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.locTitle {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: var(--blackColor);
+    margin-bottom: 15px;
+}
+
+.text-Div {
+    flex: 1;
+}
+
+.icons-Div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.icon {
+    font-size: 2rem;
+    color: var(--PrimaryColor);
+    cursor: pointer;
+}
+
+.left-Icon {
+    transform: rotate(180deg);
+}
+
+/* Content Styling */
+.locContent {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Display 3 cards in a row */
+    gap: 20px; /* Space between the cards */
+}
+
+/* Single Destination Styling */
+.singleDestinations {
+    position: relative;
+    border-radius: 8px;
+    background-color: var(--whiteColor);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    transition: transform 0.3s ease;
+}
+
+.singleDestinations:hover {
+    transform: translateY(-10px);
+}
+
+/* Title and Description */
+.dest-Details {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.dest-Title {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: var(--blackColor);
+}
+
+.dest-Location {
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: var(--textColor);
+}
+
+.dest-Description {
+    font-size: 1rem;
+    color: var(--PrimaryColor);
+}
+
+/* Footer Styling */
+.dest-Footer {
+    padding: 10px 0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    border-top: 1px solid var(--PrimaryColor);
+}
+
+.number {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--blackColor);
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+span {
+    font-size: 1rem;
+    color: var(--PrimaryColor);
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 1200px) {
+    .locContent {
+        grid-template-columns: repeat(2, 1fr); /* Display 2 cards for medium screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .locContent {
+        grid-template-columns: 1fr; /* Display 1 card for tablets */
+    }
+
+    .locHeader {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .icons-Div {
+        justify-content: center;
+        gap: 10px;
+    }
+}

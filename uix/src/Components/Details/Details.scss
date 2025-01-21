@@ -1,0 +1,171 @@
+/* Colors*/
+:root {
+    --PrimaryColor: hsl(26, 93%, 50%);
+    --HoverColor: hsl(26, 90%, 42%);
+    --whiteColor: hsl(0, 0%, 100%);
+    --blackColor: hsl(0, 0%, 18%);
+    --textColor: hsl(240, 1%, 48%);
+    --whiteColorDream: hsl(0, 0%, 93%);
+    --greyBg: hsl(0, 0%, 96%);
+    --greyText: rgb(190, 190, 190);
+    --inputColor: hsl(330, 12%, 97%);
+}
+
+/* Details Section */
+.details {
+    padding: 2rem 0;
+    .detailsContainer {
+        margin-top: 7rem;
+        margin-bottom: 7rem;
+        gap: 2rem;
+        display: flex;
+        flex-direction: column;
+
+        .detailsPost {
+            gap: 2rem;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+
+            .detailsTitle {
+                color: var(--PrimaryColor);
+                line-height: 1.8; /* Increase line-height for more space between lines */
+            }
+
+            .detailsDiv {
+                height: 200px;
+                width: 100%;
+                border-radius: 1rem;
+                border: 5px solid var(--blackColor);
+                box-shadow: 0 2px 8px 2px rgba(178, 178, 178, 0.406);
+                overflow: hidden;
+                position: relative;
+                margin-bottom: 1rem;
+
+                &:hover {
+                    img {
+                        transform: scale(1.1);
+                        transition: 3s ease;
+                    }
+                }
+
+                img {
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+
+            .detailsDetails {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+
+                h3 {
+                    color: var(--blackColor);
+                    font-weight: 600;
+                    padding-bottom: 10px;
+                    line-height: 1.8; /* Increase line-height for headings */
+                }
+
+                p {
+                    font-size: 13px;
+                    color: var(--textColor);
+                    font-weight: 500;
+                    line-height: 1.8; /* Increase line-height for paragraphs */
+                }
+
+                a {
+                    font-size: 15px;
+                    color: var(--whiteColor);
+                    font-weight: 600;
+                    padding-top: 0.5rem;
+                    width: max-content;
+                    line-height: 1.8; /* Increase line-height for links */
+
+                    &:hover {
+                        color: var(--HoverColor);
+                        font-weight: 600;
+
+                        .icon {
+                            transform: translateX(10px);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* Tab Buttons */
+.tab, .activeTab {
+    padding: 0.3rem 0.6rem; /* Small padding for button-like tabs */
+    border: 1px solid var(--greyBg);
+    border-radius: 5px; /* Rounded edges for a button-like feel */
+    cursor: pointer;
+    background-color: var(--whiteColor);
+    color: var(--textColor);
+    font-size: 0.8rem; /* Smaller font size for compact buttons */
+    font-weight: 500;
+    text-align: center;
+    line-height: 1.8; /* Increase line-height for tab text */
+}
+
+.activeTab {
+    background-color: var(--PrimaryColor);
+    color: var(--whiteColor);
+}
+
+.tab:hover {
+    background-color: var(--HoverColor);
+    color: var(--whiteColor);
+}
+
+/* Input Fields and Button */
+.inputContainer {
+    margin: 1rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .input {
+        width: 100%;
+        padding: 0.8rem;
+        margin: 0.5rem;
+        border-radius: 8px;
+        border: 1px solid var(--greyBg);
+        font-size: 1rem;
+        color: var(--textColor);
+        background-color: var(--inputColor);
+        line-height: 1.8; /* Increase line-height for input fields */
+    }
+
+    .button {
+        padding: 0.5rem 2rem;
+        border-radius: 8px;
+        background-color: var(--PrimaryColor);
+        color: var(--whiteColor);
+        font-size: 1rem;
+        cursor: pointer;
+        line-height: 1.8; /* Increase line-height for button text */
+
+        &:hover {
+            background-color: var(--HoverColor);
+        }
+    }
+}
+
+/* Map Section */
+.mapSection {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@media screen and (min-width: 884px) {
+    .details {
+        .detailsContainer {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+}

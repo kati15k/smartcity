@@ -1,0 +1,70 @@
+/* Root Colors */
+:root {
+  --PrimaryColor: hsl(26, 93%, 50%);
+  --HoverColor: hsl(26, 90%, 42%);
+  --whiteColor: hsl(0, 0%, 100%);
+  --blackColor: hsl(0, 0%, 18%);
+  --textColor: hsl(240, 1%, 48%);
+  --greyBg: hsl(0, 0%, 96%);
+  --greyMediumBg: hsl(0, 12%, 92%);
+  --greyText: rgb(190, 190, 190);
+  --inputColor: hsl(330, 12%, 97%);
+}
+
+.reviewCard {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 800px; /* Wider container */
+  padding: 2rem;
+  background: var(--whiteColor);
+  border-radius: 1rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin: 20px auto;
+  text-align: center;
+  height: 400px; /* Increase the height of the card */
+}
+.reviewCard .reviewDiv {
+  flex-grow: 1; /* Allow it to grow and fill the available space */
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.reviewCard .reviewDiv input {
+  width: 100%;
+  height: 100%; /* Make the input fill the height of reviewDiv */
+  padding: 1rem;
+  border-radius: 0.5rem;
+  border: 1px solid var(--greyMediumBg);
+  font-size: 1rem;
+  outline: none;
+  background: var(--inputColor);
+  font-family: "Arial", sans-serif;
+  resize: none; /* Disable resizing for the input field */
+}
+.reviewCard .reviewDiv input::-moz-placeholder {
+  color: var(--greyText);
+  font-style: italic;
+  font-size: 15px;
+}
+.reviewCard .reviewDiv input::placeholder {
+  color: var(--greyText);
+  font-style: italic;
+  font-size: 15px;
+}
+.reviewCard .reviewDiv input:focus {
+  border-color: var(--PrimaryColor);
+}
+.reviewCard .btn {
+  padding: 0.5rem 1rem;
+  background-color: var(--PrimaryColor);
+  color: var(--whiteColor);
+  font-size: 1rem;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.reviewCard .btn:hover {
+  background-color: var(--HoverColor);
+}/*# sourceMappingURL=Review.css.map */

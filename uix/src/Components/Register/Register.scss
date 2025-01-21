@@ -1,0 +1,189 @@
+:root {
+    --PrimaryColor: hsl(26, 93%, 50%);
+    --HoverColor: hsl(26, 90%, 42%);
+    --whiteColor: hsl(0, 0%, 100%);
+    --blackColor: hsl(0, 0%, 18%);
+    --textColor: hsl(240, 1%, 48%);
+    --whiteColorDream: hsl(0, 0%, 93%);
+    --greyBg: hsl(0, 0%, 96%);
+    --greyText: rgb(190, 190, 190);
+    --inputColor: hsl(330, 12%, 97%);
+}
+
+body,
+html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
+
+.form {
+    display: flex;
+    height: 100vh;
+    width: 100%;
+}
+
+.contentForm {
+    display: flex;
+    width: 100%;
+}
+
+.left {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--greyBg);
+    overflow: hidden;
+}
+
+.image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+   
+}
+
+.right {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--whiteColor);
+    padding: 20px;
+}
+.registerText {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--textColor);
+    margin-bottom: 20px;
+   
+}
+
+.formContainer {
+    width: 100%;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--whiteColor);
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    gap: 20px;
+}
+
+.formCard {
+    display: grid;
+    gap: 20px;
+}
+
+.passDiv,
+.emailDiv,
+.fullnameDiv,
+.usernameDiv {
+    width: 100%;
+}
+
+label {
+    display: block;
+    color: var(--textColor);
+    font-weight: 500;
+    font-size: 13px;
+    padding-bottom: 5px;
+}
+
+input {
+    width: 100%;
+    background: var(--inputColor);
+    border-radius: 10px;
+    border: none;
+    padding: 10px;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+input::placeholder {
+    font-size: 13px;
+    opacity: 0.5;
+    font-weight: 400;
+}
+
+input:focus {
+    outline: none;
+}
+
+.registerbtn {
+    color: var(--whiteColor);
+    transition: background-color 0.3s ease;
+    padding: .4rem 1.5rem;
+    background: var(--PrimaryColor);
+    border: none;
+    outline: none;
+    border-radius: 3rem;
+    cursor: pointer;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    display: block;
+}
+.btn:hover {
+    background-color: var(--HoverColor);
+}
+
+.loginText {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 14px;
+    color: var(--textColor);
+}
+
+.loginText a {
+    color: var(--PrimaryColor);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.loginText a:hover {
+    text-decoration: underline;
+}
+
+/* Responsiveness */
+
+@media screen and (min-width:480px) {
+    .form {
+        .contentForm {
+            .formCard {
+                bottom: -100px;
+                width: 90%;
+
+                grid-template-columns: repeat(1, 1fr);
+                 .btn {
+                    transform: translateY(15px);
+                }
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    .form {
+        flex-direction: column;
+    }
+
+    .left, .right {
+        flex: none;
+        width: 100%;
+    }
+
+    .image {
+        height: 50vh;
+    }
+
+    .formContainer {
+        padding: 15px;
+    }
+}

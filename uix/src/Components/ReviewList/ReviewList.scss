@@ -1,0 +1,171 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  transition: 0.3s ease;
+}
+
+/* Colors */
+:root {
+  --PrimaryColor: hsl(26, 93%, 50%);
+  --HoverColor: hsl(26, 90%, 42%);
+  --whiteColor: hsl(0, 0%, 100%);
+  --blackColor: hsl(0, 0%, 18%);
+  --textColor: hsl(240, 1%, 48%);
+  --whiteColorDream: hsl(0, 0%, 93%);
+  --greyBg: hsl(0, 0%, 96%);
+  --greyText: rgb(190, 190, 190);
+  --inputColor: hsl(330, 12%, 97%);
+}
+
+.review-container {
+  
+  padding: 2rem;
+  max-width: 75%;
+  margin: auto;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: var(--blackColor);
+}
+.review-Title{
+  /*make it below the navbar*/
+
+}
+
+.review-grid {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+.review-card {
+  background: var(--whiteColor);
+  border-radius: 10px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px 2px rgba(178, 178, 178, 0.45);
+  transition: 0.3s ease;
+}
+
+.review-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 16px rgba(178, 178, 178, 0.6);
+}
+
+.review-info h3 {
+  color: var(--PrimaryColor);
+  margin-bottom: 0.5rem;
+}
+
+.review-info p {
+  color: var(--textColor);
+  margin-bottom: 0.5rem;
+}
+
+.actions {
+  gap: 0.5rem;
+}
+
+.r-btn {
+  padding: 0.4rem 1.2rem;
+  border: none;
+  border-radius: 3rem;
+  display: block;
+  margin: 0 auto;
+  margin-top: 1rem;
+  cursor: pointer;
+  color: var(--whiteColor);
+  background: var(--PrimaryColor);
+  font-weight: 500;
+}
+
+.user-btn:hover {
+  background: var(--HoverColor);
+}
+
+.user-btn.delete {
+  background: var(--blackColor);
+}
+
+.user-btn.delete:hover {
+  background: var(--textColor);
+}
+
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .modal {
+    background: var(--whiteColor);
+    padding: 2rem;
+    border-radius: 8px;
+    width: 400px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  .modal h2 {
+    margin-bottom: 1rem;
+  }
+  
+  .modal .form-group {
+    margin-bottom: 1rem;
+  }
+  
+  .modal .form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+  }
+  
+  .modal .form-group input {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid var(--greyBg);
+    border-radius: 5px;
+  }
+  
+  .modal-actions .user-btn {
+    margin-right: 0.5rem;
+  }
+  .pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .pagination button {
+    margin: 0 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 20%;
+  }
+  
+  .pagination button:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+  }
+  
+  .pagination button.active {
+    background-color: var(--PrimaryColor);
+    color: var(--whiteColor);
+  }
+  
+  .pagination button:hover:not(:disabled) {
+    background-color: var(--HoverColor);
+    color: var(--whiteColor);
+  }

@@ -1,0 +1,98 @@
+/* Colors */
+:root {
+    --PrimaryColor: hsl(26,93%,50%);
+    --HoverColor: hsl(26,90%,42%);
+    --whiteColor: hsl(0,0%,100%);
+    --blackColor: hsl(0,0%,18%);
+    --textColor: hsl(240,1%,48%);
+    --whiteColorDream: hsl(0,0%,93%);
+    --greyBg: hsl(0,0%,96%);
+    --greyText: rgb(190,190,190);
+    --inputColor: hsl(330,12%,97%);
+}
+
+/* Base Styles */
+.about {
+    padding: 50px 0;
+}
+
+.aboutContainer {
+ 
+    max-width: 1200px;
+    margin: 0 auto;
+    
+}
+
+.aboutContent {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 50px;
+    margin-top: 60px;
+}
+
+.aboutContent.notreverse {
+    flex-direction: row;
+}
+
+.textRight {
+    width: 45%;
+    text-align: left;
+}
+
+.textRight h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #000;
+}
+
+.textRight p {
+    font-size: 1rem;
+    line-height: 1.7;
+    
+}
+
+
+
+.imageRight {
+    width: 45%;
+}
+
+.imageRight img {
+    width: 80%;
+    height: auto;
+    border-radius: 10px;
+}
+.finalPhrase {
+    margin-top: 20px;
+    text-align: center;
+    font-style: italic;
+    font-size: 1.2rem;
+    color: #555;
+}
+
+
+/* Media Queries for Mobile */
+@media (max-width: 768px) {
+    .aboutContent {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .textLeft h2, .textRight h2  {
+        font-size: 1.2rem;
+    }
+
+    .textLeft p, .textRight p{
+        font-size: 0.8rem;
+    }
+
+    .textLeft, .textRight, .imageLeft, .imageRight {
+        width: 100%;
+    }
+
+    .imageLeft img, .imageRight img {
+        width: 80%;
+    }
+}
+

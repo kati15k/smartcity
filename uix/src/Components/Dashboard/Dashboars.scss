@@ -1,0 +1,199 @@
+:root {
+  --PrimaryColor: hsl(26, 93%, 50%);
+  --HoverColor: hsl(26, 90%, 42%);
+  --whiteColor: hsl(0, 0%, 100%);
+  --blackColor: hsl(0, 0%, 18%);
+  --textColor: hsl(240, 1%, 48%);
+  --whiteColorDream: hsl(0, 0%, 93%);
+  --greyBg: hsl(0, 0%, 96%);
+  --greyText: rgb(190, 190, 190);
+  --inputColor: hsl(330, 12%, 97%);
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: var(--greyBg);
+  color: var(--textColor);
+}
+
+h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  color: var(--blackColor);
+  transition: color 0.3s ease;
+}
+
+h2 {
+  margin-bottom: 20px;
+  font-size: 24px;
+  font-weight: bold;
+  color: var(--blackColor);
+  transition: color 0.3s ease;
+}
+
+h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: var(--blackColor);
+  transition: color 0.3s ease;
+}
+
+.admin-dashboard {
+  text-align: center;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.header {
+  margin-bottom: 20px;
+}
+
+.header-Div {
+  text-align: center;
+}
+
+.headerTitle {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.tableContainer {
+  margin: 20px 0;
+  width: 50%;
+  margin: 0 auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid var(--greyText);
+}
+
+th {
+  background-color: var(--PrimaryColor);
+  color: white;
+}
+
+.chartsContainer {
+  display: flex;
+  justify-content: space-around;
+  margin: 20px 0;
+}
+
+.chartContainer {
+  margin: 20px 0;
+}
+
+.chartWrapper {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.otp-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  //margin-top: 50px;
+}
+
+.otp-inputs {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+    margin-top: 100px;
+  margin-bottom: 20px;
+}
+
+.otp-input {
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  font-size: 24px;
+  border: 2px solid var(--PrimaryColor);
+  border-radius: 8px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.otp-input:focus {
+  border-color: var(--HoverColor);
+}
+
+.submit-btn {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: var(--PrimaryColor);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+  background-color: var(--HoverColor);
+}
+
+.todoContainer {
+  margin: 50px 0; /* Added margin to create space between calendar and to-do list */
+}
+
+.task-input {
+  width: 300px;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid var(--greyText);
+  border-radius: 8px;
+  margin-right: 10px;
+}
+
+.tasks-list {
+  list-style: none;
+  padding: 0;
+}
+
+.task-item {
+  margin-bottom: 20px;
+  padding: 10px;
+  border: 1px solid var(--greyText);
+  border-radius: 8px;
+  background-color: var(--whiteColor);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 25px;
+
+}
+
+.edit-btn, .delete-btn {
+  background-color: var(--PrimaryColor);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 5px 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.edit-btn:hover, .delete-btn:hover {
+  background-color: var(--HoverColor);
+}
+
+.calendarContainer {
+  margin: 20px 0;
+  margin-left: 165px;
+
+}
+
+.date-picker {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid var(--greyText);
+  border-radius: 8px;
+}

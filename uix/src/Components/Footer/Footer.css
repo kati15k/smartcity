@@ -1,0 +1,140 @@
+:root {
+  --PrimaryColor: hsl(26, 93%, 50%);
+  --HoverColor: hsl(26, 90%, 42%);
+  --whiteColor: hsl(0, 0%, 100%);
+  --blackColor: hsl(0, 0%, 18%);
+  --lightBlackColor: hsl(0, 5%, 18%);
+  --textColor: hsl(240, 1%, 48%);
+  --whiteColorDream: hsl(0, 0%, 93%);
+  --greyBg: hsl(0, 0%, 96%);
+  --greyText: rgb(190, 190, 190);
+  --inputColor: hsl(330, 12%, 97%);
+}
+
+.footer {
+  color: var(--whiteColor);
+  padding: 50px 0;
+}
+
+.footerContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footerDiv {
+  text-align: center;
+}
+
+.footerLogo h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--whiteColor);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footerLogo .icon {
+  margin-right: 8px;
+  font-size: 2rem;
+  color: var(--PrimaryColor);
+}
+
+.footerLinks {
+  margin-top: 20px;
+}
+
+.linkTitle {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--whiteColorDream);
+}
+
+.footerLinks a {
+  display: block;
+  margin: 10px 0;
+  color: var(--textColor);
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.footerLinks a:hover {
+  color: var(--PrimaryColor);
+}
+
+.contactInfo {
+  font-size: 1rem;
+  color: var(--greyText);
+}
+
+.phone, .email {
+  display: block;
+  margin: 5px 0;
+  font-size: 16px;
+}
+
+.copyright {
+  margin-top: 20px;
+  font-size: 0.9rem;
+  color: var(--greyText);
+}
+
+footer a:hover {
+  color: var(--HoverColor);
+}
+
+/* Modal Styles */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background-color: var(--whiteColor);
+  padding: 20px;
+  border-radius: 8px;
+  color: var(--blackColor);
+  max-width: 600px;
+  width: 100%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.modal-actions {
+  margin-top: 20px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.close-btnss {
+  background-color: var(--PrimaryColor);
+  color: var(--whiteColor);
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  border-radius: 4px;
+}
+
+.close-btnss:hover {
+  background-color: var(--HoverColor);
+}
+
+.linkies {
+  color: var(--PrimaryColor);
+  cursor: pointer;
+}
+
+.linkies:hover {
+  color: var(--HoverColor);
+}/*# sourceMappingURL=Footer.css.map */

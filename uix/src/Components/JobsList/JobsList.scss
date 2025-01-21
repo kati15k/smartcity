@@ -1,0 +1,167 @@
+/* Define color variables */
+:root {
+  --PrimaryColor: hsl(26, 93%, 50%);
+  --HoverColor: hsl(26, 90%, 42%);
+  --whiteColor: hsl(0, 0%, 100%);
+  --blackColor: hsl(0, 0%, 18%);
+  --textColor: hsl(240, 1%, 48%);
+  --whiteColorDream: hsl(0, 0%, 93%);
+  --greyBg: hsl(0, 0%, 96%);
+  --greyText: rgb(190, 190, 190);
+  --inputColor: hsl(330, 12%, 97%);
+}
+
+/* Section Styling */
+.job {
+  padding: 60px 0;
+}
+
+.jobContainer {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Header Styling */
+.jobHeader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 40px;
+  color: var(--blackColor);
+  font-size: 19px;
+}
+
+.job-Div {
+  flex: 1;
+}
+
+.jobTitle {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: var(--blackColor);
+  margin-bottom: 10px;
+}
+.job-Post {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--blackColor);
+
+}
+
+.jobContent {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Display 3 cards in a row */
+  gap: 20px; /* Space between the cards */
+}
+
+/* Single Job Card Styling */
+.singleJob {
+  position: relative;
+  border-radius: 8px;
+  background-color: var(--whiteColor);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  transition: transform 0.3s ease;
+}
+
+.singleJob:hover {
+  transform: translateY(-10px);
+}
+
+/* Job Title and Description */
+.job-Content {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.job-Title {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: var(--blackColor);
+}
+
+.job-Position {
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: var(--textColor);
+}
+
+.job-Link {
+  font-size: 0.9rem;
+  color: var(--PrimaryColor);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+   cursor: pointer;
+}
+
+.job-Location {
+  display: flex;
+  align-items: center;
+  gap: 5px; /* Space between link and icon */
+}
+
+.icons1 {
+  font-size: 1.5rem;
+  color: var(--PrimaryColor);
+  cursor: pointer;
+}
+
+.icons{
+  font-size: 1.5rem;
+  color: var(--PrimaryColor);
+  cursor: pointer;
+  display: flex;
+  right: 0;
+  transform: translateX(100%);
+  justify-content: space-between;
+}
+
+/* Pagination Controls */
+.pagination-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.pagination-btn {
+  background-color: var(--PrimaryColor);
+  color: var(--whiteColor);
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 1rem;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.pagination-btn:hover {
+  background-color: var(--HoverColor);
+}
+
+span {
+  font-size: 1.2rem;
+  color: var(--blackColor);
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 1200px) {
+  .jobContent {
+    grid-template-columns: repeat(2, 1fr); /* Display 2 cards for medium screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .jobContent {
+    grid-template-columns: 1fr;
+  }
+
+  .jobHeader {
+    flex-direction: column;
+    text-align: center;
+  }
+}

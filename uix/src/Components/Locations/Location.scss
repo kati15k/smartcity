@@ -1,0 +1,278 @@
+:root {
+    --PrimaryColor: hsl(26, 93%, 50%);
+    --HoverColor: hsl(26, 90%, 42%);
+    --whiteColor: hsl(0, 0%, 100%);
+    --blackColor: hsl(0, 0%, 18%);
+    --textColor: hsl(240, 1%, 48%);
+    --whiteColorDream: hsl(0, 0%, 93%);
+    --greyBg: hsl(0, 0%, 96%);
+    --greyText: rgb(190, 190, 190);
+    --inputColor: hsl(330, 12%, 97%);
+}
+
+/* Section Styling */
+.location {
+    padding: 60px 0;
+}
+
+.section {
+    display: block;
+    margin: 0 auto;
+}
+
+/* Container Styling */
+.locContainer {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header Styling */
+.locHeader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.locTitle {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: var(--blackColor);
+    margin-bottom: 15px;
+}
+
+.text-Div {
+    flex: 1;
+}
+
+.icons-Div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.icon {
+    font-size: 2rem;
+    color: var(--PrimaryColor);
+    cursor: pointer;
+}
+
+.left-Icon {
+    transform: rotate(180deg);
+}
+
+/* Content Styling */
+.locContent {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Display 3 cards in a row */
+    gap: 20px; /* Space between the cards */
+}
+
+/* Single Destination Styling */
+.singleDestinations {
+    position: relative;
+    border-radius: 8px;
+    background-color: var(--whiteColor);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    transition: transform 0.3s ease;
+}
+
+.singleDestinations:hover {
+    transform: translateY(-10px);
+}
+
+/* Title and Description */
+.dest-Details {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.dest-Title {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: var(--blackColor);
+}
+
+.dest-Location {
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: var(--textColor);
+}
+
+.dest-Description {
+    font-size: 1rem;
+    color: var(--PrimaryColor);
+}
+
+/* Footer Styling */
+.dest-Footer {
+    padding: 10px 0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    border-top: 1px solid var(--PrimaryColor);
+}
+
+.number {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--blackColor);
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+span {
+    font-size: 1rem;
+    color: var(--PrimaryColor);
+}
+
+.website-link {
+    color: var(--PrimaryColor);
+    text-decoration: none;
+}
+
+.website-link:hover {
+    text-decoration: underline;
+}
+
+/* Search Bar and Sort Button Container */
+.search-sort-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px; 
+    margin-top: 30px;
+    width: 100%;
+}
+
+/* Search Bar Styling */
+.search-bar {
+    width: 100%;
+    max-width: 500px;
+    margin-top: 30px;
+    padding: 10px 15px;
+    font-size: 1rem;
+    border: 2px solid var(--greyText);
+    border-radius: 20px;
+    background-color: var(--inputColor);
+    color: var(--blackColor);
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.search-bar::placeholder {
+    color: var(--greyText);
+    font-size: 0.9rem;
+}
+
+.search-bar:focus {
+    outline: none;  
+    border-color: white;  
+    background-color: var(--whiteColor);
+}
+
+
+.sort-dropdown {
+    width: 100%;
+    max-width: 300px;
+    margin-top: 30px;
+    padding: 6px 8px;
+    font-size: 0.8rem;
+    border: 1px solid var(--greyText);
+    border-radius: 20px;
+    background-color: var(--inputColor);
+    color: var(--blackColor);
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.sort-dropdown::placeholder {
+    color: var(--greyText);
+    font-size: 1rem;
+}
+
+.sort-dropdown:focus {
+    outline: none;  
+    border-color: white;  
+    background-color: var(--whiteColor);
+}
+
+
+
+/* Sort Button Styling */
+.sort-button {
+    margin-top: 15px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    margin-right: 30px;
+    font-weight: 600;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--PrimaryColor);
+    color: var(--whiteColor);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-block; /* Ensure button is inline */
+}
+
+/* Hover effect for sort button */
+.sort-button:hover {
+    background-color: var(--HoverColor);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Buttons Container for horizontal layout */
+.buttons-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px; /* Adds space between buttons */
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 1200px) {
+    .locContent {
+        grid-template-columns: repeat(2, 1fr); 
+    }
+
+    /* Adjust the sort dropdown for smaller screens */
+    .sort-dropdown {
+        right: 0%;  /* Aligns it more responsively */
+        width: auto; /* Allow it to adjust to screen size */
+    }
+}
+
+@media (max-width: 768px) {
+    .locContent {
+        grid-template-columns: 1fr; 
+    }
+
+    .locHeader {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .icons-Div {
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .search-sort-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .sort-dropdown, .sort-button {
+        width: 100%;  /* Make the dropdown and button full width on smaller screens */
+        margin-top: 10px;  /* Add space between elements */
+    }
+}

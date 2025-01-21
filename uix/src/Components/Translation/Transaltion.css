@@ -1,0 +1,177 @@
+:root {
+  --PrimaryColor: hsl(26, 93%, 50%);
+  --HoverColor: hsl(26, 90%, 42%);
+  --whiteColor: hsl(0, 0%, 100%);
+  --blackColor: hsl(0, 0%, 18%);
+  --textColor: hsl(240, 1%, 48%);
+  --whiteColorDream: hsl(0, 0%, 93%);
+  --greyBg: hsl(0, 0%, 96%);
+  --greyText: rgb(190, 190, 190);
+  --inputColor: hsl(330, 12%, 97%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--whiteColorDream);
+  color: var(--blackColor);
+}
+
+.conversation-container {
+  text-align: center;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto; /* Center the container */
+}
+
+h1 {
+  font-size: 2rem;
+  color: var(--blackColor);
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+h2 {
+  font-size: 1.3rem;
+  color: var(--greyText);
+  margin-bottom: 20px;
+  text-decoration: underline;
+  text-transform: capitalize;
+}
+
+.conversation-section {
+  margin: 30px auto;
+  text-align: center;
+  width: 90%;
+  padding: 20px;
+  background-color: var(--whiteColor);
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease-in-out;
+}
+.conversation-section:hover {
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+}
+
+.conversation-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.conversation-text {
+  flex: 1;
+  text-align: center; /* Center the text */
+  padding-right: 20px;
+}
+
+.japanese-text {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: var(--blackColor);
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+.pronunciation-text {
+  font-size: 1.2rem;
+  color: var(--greyText);
+  font-style: italic;
+  margin-bottom: 10px;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 14px;
+  cursor: pointer;
+  margin-right: 15px;
+  background-color: var(--PrimaryColor);
+  color: var(--whiteColor);
+  border: none;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+button:hover {
+  background-color: var(--HoverColor);
+  transform: translateY(-2px);
+}
+button:active {
+  transform: translateY(1px);
+}
+
+.english-text {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: var(--blackColor);
+  margin-bottom: 18px;
+}
+
+.conversation-image {
+  flex: 0.5;
+  text-align: center;
+}
+.conversation-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+.conversation-image img:hover {
+  transform: scale(1.05);
+}
+
+/* At the airport section */
+.at-airport-text {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: var(--blackColor);
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+/* Responsive design adjustments */
+@media screen and (max-width: 768px) {
+  .conversation-content {
+    flex-direction: column;
+    align-items: center;
+  }
+  .conversation-text {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .conversation-image {
+    text-align: center;
+    margin-top: 20px;
+  }
+  .conversation-image img {
+    width: 80%;
+    height: auto;
+  }
+}
+@media screen and (max-width: 480px) {
+  h1 {
+    font-size: 2.3rem;
+  }
+  h2 {
+    font-size: 1.7rem;
+  }
+  .conversation-container {
+    margin-top: 20px;
+    padding: 10px;
+  }
+  .conversation-text,
+  .conversation-image {
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+}/*# sourceMappingURL=Transaltion.css.map */

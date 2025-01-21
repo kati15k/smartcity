@@ -1,0 +1,199 @@
+/* Colors */
+:root {
+    --PrimaryColor: hsl(26, 93%, 50%);
+    --HoverColor: hsl(26, 90%, 42%);
+    --whiteColor: hsl(0, 0%, 100%);
+    --blackColor: hsl(0, 0%, 18%);
+    --textColor: hsl(240, 1%, 48%);
+    --whiteColorDream: hsl(0, 0%, 93%);
+    --greyBg: hsl(0, 0%, 96%);
+    --greyMediumBg: hsl(0, 12%, 92%);
+    --greyText: rgb(190, 190, 190);
+    --inputColor: hsl(330, 12%, 97%);
+}
+
+.home {
+
+    padding-top: 5rem 0;
+    height: 80vh;
+    background: linear-gradient(rgba(33, 33, 33, 0.522), rgba(33, 33, 33, 0.522)), url('../../Assets/homepic_enhanced.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+    .secContainer {
+        .homeText {
+            text-align: center;
+
+            .title {
+                color: var(--whiteColor);
+                font-size: 2rem;
+                font-weight: 700;
+                line-height: 2.5rem;
+            }
+
+            .subTitle {
+                color: var(--whiteColor);
+                opacity: 0.9;
+                font-size: 13px;
+                font-weight: 300;
+                padding: 1rem 0;
+                max-width: 70%;
+                text-align: center;
+                margin: auto;
+            }
+
+            .btn {
+                padding: .6rem 1.5rem;
+                margin-bottom: 120px;
+                position: relative; 
+
+
+            }
+        }
+
+        .homeCard {
+            width: 80%;
+            border-radius: 1rem;
+            padding: 2rem;
+            background: var(--whiteColor);
+            position: absolute;
+            gap: 1rem;
+            
+            margin-top: 100px;
+            justify-content: center;
+            bottom: -20%;
+            transform: translate(-50%);
+            left: 50%;
+            box-shadow: 0 2px 8px 4px rgba(202, 85, 30, 0.45);
+            z-index: 1;
+
+            .locationDiv {
+                width: 100%;
+
+
+                label {
+                    display: block;
+                    color: var(--textColor);
+                    font-weight: 500;
+                    font-size: 13px;
+                    padding-bottom: .4rem;
+                }
+
+
+                input {
+                    width: 100%;
+                    background: var(--greyMediumBg);
+                    border-radius: 10px;
+                    border: none;
+                    padding: 10px;
+                    font-size: 13px;
+                    font-weight: 500;
+
+                    &::placeholder {
+                        font-size: 13px;
+                        opacity: .5;
+                        font-weight: 400;
+                    }
+
+                    &:focus {
+                        outline: none;
+                    }
+                }
+                .btn1 {
+                    align-self: center;
+                    padding: .6rem 1.5rem;
+                    background: var(--PrimaryColor);
+                    border: none;
+                    outline: none;
+                    border-radius: 3rem;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}
+
+
+@media screen and (min-width:480px) {
+    .home {
+        .secContainer {
+            .homeCard {
+                bottom: -100px;
+                width: 90%;
+                grid-template-columns: repeat(2, 1fr);
+
+                .btn {
+                    transform: translateY(15px);
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width:556px) {
+    .home {
+        .secContainer {
+            .homeText {
+                .title {
+                    font-size: 2.5rem;
+                }
+
+                .subTitle {
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width:720px) {
+    .home {
+        .secContainer {
+            .homeCard {
+                bottom: -10%;
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+    }
+}
+
+@media screen and (min-width:720px) {
+    .home {
+        .secContainer {
+            .homeText {
+                padding: 1rem 10rem;
+
+                .title {
+                    font-size: 3.5rem;
+                    margin: auto;
+                    line-height: 4rem;
+                }
+
+                .subTitle {
+                    width: 70%;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width:1024px) {
+    .home {
+        .secContainer {
+            .homeText {
+                .subTitle {
+                    font-size: 20px;
+                }
+            }
+
+            .homeCard {
+                width: 70%;
+            }
+        }
+    }
+}
