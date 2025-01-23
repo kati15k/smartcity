@@ -3,40 +3,39 @@ import "./NavBar.scss";
 import { FaStreetView } from "react-icons/fa";
 import { AiFillCloseCircle } from "react-icons/ai";
 import { TbGridDots } from "react-icons/tb";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { LuReceiptJapaneseYen } from "react-icons/lu";
-
+import { useStateContext } from "../../Contexts/ContextProvider";
 
 const NavBar = () => {
+    const [active, setActive] = useState('navBar');
+    const [dropdownOpen, setDropdownOpen] = useState(false);
+    const { setUser, setToken } = useStateContext();
+    const navigate = useNavigate();
 
-    //toggle and show navbar
-    const [active, setActive] = useState('navBar')
-    //show NavBar
     const showNav = () => {
-        setActive('navBar activeNavBar')
-    }
-    //remove navabr
+        setActive('navBar activeNavBar');
+    };
+
     const removeNav = () => {
-        setActive('navBar')
-    }
+        setActive('navBar');
+    };
 
-    //header background color
-    const [transparent, setTransparent] = useState('header')
-    const [dropdownOpen, setDropdownOpen] = useState(false); // Dropdown state
-    const toggleDropdown = () => setDropdownOpen(!dropdownOpen); // Toggle dropdown
+    const toggleDropdown = () => setDropdownOpen(!dropdownOpen);
 
-    const addBg = () => {
-        if (window.scrollY >= 10) {
-            setTransparent('header activeHeader')
-        } else {
-            setTransparent('header activeHeader')
+    const handleLogout = () => {
+        if (window.confirm("Are you sure you want to logout?")) {
+            setUser(null);
+            setToken(null);
+            localStorage.removeItem("token");
+            localStorage.removeItem("user");
+            navigate("/login");
         }
-    }
-    window.addEventListener('scroll', addBg)
+    };
 
     return (
         <section className="navBarSection">
-            <div className={transparent}>
+            <div className="header activeHeader">
                 <div className="logoDiv">
                     <a href="/" className="logo">
                         <h1 className="flex">
@@ -48,32 +47,30 @@ const NavBar = () => {
 
                 <div className={active}>
                     <ul className="navLists flex">
-
                         <li className="navItem">
                             <Link to="/academic" className="navLink">Academics</Link>
                         </li>
-
                         <li className="navItem">
                             <Link to="/amusement" className="navLink">Destinations</Link>
-                        </li><li className="navItem">
-                            <Link to="/companies" className="navLink">Businesses</Link>
-                        </li><li className="navItem">
-                            <Link to="/jobs" className="navLink">Jobs</Link>
-                        </li><li className="navItem">
+                        </li>
+                        <li className="navItem">
                             <Link to="/text" className="navLink">Communication</Link>
-
-                        </li><li className="navItem">
+                        </li>
+                        <li className="navItem">
+                            <Link to="/companies" className="navLink">Businesses</Link>
+                        </li>
+                        <li className="navItem">
                             <Link to="/manners" className="navLink">Culture</Link>
                         </li>
-
+                        <li className="navItem">
+                            <Link to="/jobs" className="navLink">Jobs</Link>
+                        </li>
+                        <li className="navItem">
+                            <Link to="/about" className="navLink">About Us</Link>
+                        </li>
                         <div className="headerBtns flex">
-                            <button className="btn loginBtn">
-                            <Link to="/login" className="navLink">Login</Link>
-                            </button>
-                        </div>
-                        <div className="headerBtns flex">
-                            <button className="btn loginBtn">
-                            <Link to="/register" className="navLink">Register</Link>
+                            <button className="btn loginBtn" onClick={handleLogout}>
+                                Logout
                             </button>
                         </div>
                     </ul>
@@ -87,7 +84,7 @@ const NavBar = () => {
                 </div>
             </div>
         </section>
+    );
+};
 
-    )
-}
-export default NavBar
+export default NavBar;
